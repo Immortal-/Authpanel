@@ -32,8 +32,6 @@
 		$dec = decrypt($code);
 		$info = explode(':',$dec);
 		
-		//return $info[0] . ':' . $info[1];
-		
 		if($info[0] == $name){
 			if($info[1] == $_code){
 				return 'valid';
