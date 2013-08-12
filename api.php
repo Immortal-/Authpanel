@@ -54,9 +54,9 @@ switch($method){
 	case "m":
 		if(isset($_REQUEST['u'])){
 			$name = $_REQUEST['u'];
-			$authcode = GetAuth($name);
+			$authcode = MakeAuth($name);
 			echo $authcode;
-			
+
 			}else{
 				echo 'You must provide a username! <br />';
 			}
