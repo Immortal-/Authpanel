@@ -56,5 +56,6 @@
     <script src="http://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js"></script>
+   <script src="https://raw.github.com/scottjehl/Respond/master/respond.min.js" ></script>
    </body>
    </html>
