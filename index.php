@@ -35,7 +35,7 @@
             </ul>
             
              <ul class="nav navbar-nav pull-right">
-            	<li><a class="disabled" href="#">Api Link: <? echo ApiLocation; ?></a></li>
+            	<li><a class="disabled" href="<? echo ApiLocation;?>">Api Link: <? echo ApiLocation; ?></a></li>
           	</ul>
           
         </div><!--/.nav-collapse -->
@@ -52,7 +52,10 @@
         I have also included the function to get a persons username based on their authcode.
          </p>
         <p>
-        	<script src="./source.php"></script>
+             <iframe src="./source2.php" style="border:none;width:100%">
+               <script src="./source.php"></script>
+             </iframe>
+            
        	 </p>
         <p>
           <a class="btn btn-large btn-primary" href="http://pastebin.com/raw.php?i=SBjHFHQp">Download Code &raquo;</a>
