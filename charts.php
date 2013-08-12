@@ -1,4 +1,4 @@
-<?.
+<?
 /*
  * AuthPanel's Charts
 * Coded by Immortal
@@ -6,7 +6,7 @@
 * _  PasteBin I stole their Highlighting script and used it in source.php *Sorry pastebin I love you guys*
 * _  8/11/2013
 * */
-  require_once 'globle.php';
+  require_once 'global.php';
 	
 	// Register and throw up ur images here.
 ?>
