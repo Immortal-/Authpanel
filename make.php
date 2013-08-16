@@ -7,7 +7,7 @@
  * _ jQuery hosted officaly
  * _  8/11/2013
  * */
-  require_once ('global.php');
+  require_once ('./includes/config.php');
 	
 ?>
 <!DOCTYPE html>

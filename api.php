@@ -1,18 +1,12 @@
 <?php 
-/*
- * AuthPanel's Api
-* Coded by Immortal
-* Credits: Twitter's Bootstrap, Hosted 3rd party with a cdn
-* _  PasteBin I stole their Highlighting script and used it in source.php *Sorry pastebin I love you guys*
-* _  8/11/2013
-* */
-  require_once 'global.php';
+
+  require_once ('./includes/config.php');
 /*
  * Very Simple api for others to validate their accounts.
  * 
  */
-	if(isset($_REQUEST['m'])){
-		$method = $_REQUEST['m'];
+  if(IsThere('m')){
+    	$method = $_REQUEST['m'];
 	}else{
 		echo 'You need to provide a valid MODE via: api.php?m=';
 	}
@@ -20,22 +14,27 @@
 
 switch($method){
 	case "c":
-		if(isset($_REQUEST['u']) && isset($_REQUEST['c'])){
-		
-			$name = $_REQUEST['u'];
-			$authcode = $_REQUEST['c'];
-		
-			$responce = CheckAuth($name,$authcode);
-		
-			echo $responce;
+		if(IsThere('u') && IsThere('c')){
+			if(IsThere('ss')){
+				$sitesalt = $_REQUEST['ss'];
+				$name = $_REQUEST['u'];
+				$authcode = $_REQUEST['c'];
+				$responce = CheckAuth($name,$authcode,$sitesalt);
+				echo $responce;
+			}else{
+				$name = $_REQUEST['u'];
+				$authcode = $_REQUEST['c'];
+				$responce = CheckAuth($name,$authcode);
+				echo $responce;
+			}
 		
 		}else{
 		
-			if(isset($_REQUEST['u'])){
+			if(IsThere('u')){
 				echo 'You must provide a username! <br />';
 			}
 		
-			if(isset($_REQUEST['c'])){
+			if(IsThere('c')){
 				echo 'You must provide a AuthCode! <br />';
 			}
 		
@@ -44,7 +43,7 @@ switch($method){
 		break;
 		
 	case "n":
-		if(isset($_REQUEST['c'])){
+		if(IsThere('c')){
 			$code = $_REQUEST['c'];
 			$name = GetName($code);
 			echo $name;
@@ -52,14 +51,21 @@ switch($method){
 		break;
 
 	case "m":
-		if(isset($_REQUEST['u'])){
-			$name = $_REQUEST['u'];
-			$authcode = MakeAuth($name);
-			echo $authcode;
-
+		if(IsThere('u')){
+			if(IsThere('ss')){
+				$sitesalt = $_REQUEST['ss'];
+				$name = $_REQUEST['u'];
+				$authcode = MakeAuth($name,$sitesalt);
+				echo $authcode;
 			}else{
-				echo 'You must provide a username! <br />';
+				$name = $_REQUEST['u'];
+				$authcode = MakeAuth($name);
+				echo $authcode;
 			}
+
+	 	}else{
+			echo 'You must provide a username! <br />';
+		}
 		break;
 	
 }
