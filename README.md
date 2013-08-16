@@ -26,4 +26,5 @@ AuthPanel is supposed to be a very lite weight code based authencation system.
 
 	Two: You need to know what parameters each mode needs. Such has mode c takes three paramters such as [u,c,ss] u= username, c= usernames authcode, ss= SiteSalt this is a site specific code that is used as a salt, if not supplyed will use default salt you set in /includes/config.php
 	
-	for better api please look at the offical documentation on [AuthPanel ApiDoc](http://authpanel.pw/api.php)
+	for better api please look at the offical documentation on 
+[AuthPanel ApiDoc](http://authpanel.pw/api.php)
