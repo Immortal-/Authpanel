@@ -52,7 +52,7 @@
 						return 'Invalid code';
 					}
 				}else{
-					return "Invalid name | $args1  | $var1[1]";
+					return "Invalid name";
 				}
 			
 
