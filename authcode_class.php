@@ -9,7 +9,7 @@
 		/*
 		* 	@Disc: Makes a new authcode 
 		* 	@Var: $args1 is the user identifyer
-		*   @Var: $args2 is the salt provided by the requestor
+		*       @Var: $args2 is the salt provided by the requestor
 		*	@Var: $var1 is the adler32 hash of the user identifyer
 		*	@Var: $var2 is the base64 encoded user identifyer followed by a : followed by the adler32 hash of the user identifyer
 		*	@Var: $e is the exception that may or may not happen error handling
@@ -31,7 +31,7 @@
 		/*
 		* 	@Disc: Checks to see if an authcode is valid or not 
 		* 	@Var: $args1 is the user identifyer
-		*   @Var: $args2 is the salt provided by the requestor
+		*       @Var: $args2 is the salt provided by the requestor
 		*	@Var: $args3 is the authcode to check
 		*	@Var: $_pvar1 is a a generated authcode 
 		*	@Var: $var1 is first the decoded authcode then split into parts
