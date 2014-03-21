@@ -1,10 +1,15 @@
-#AuthPanel Version 1.0.3#
+#Authpanel Version 1.0.4#
 =========
 
-AuthPanel is supposed to be a very lite weight code based authencation system.
+Authpanel is supposed to be a very lite weight code based authencation system.
 
 
 #ChangeLog:#
+	V1.0.4 "Security Update"
+	- [x] Changed the way the codes are created and handled to protect userdata.
+	- [x] Added a byte rotating function 
+	
+	V1.0.3 "Class Update"
 	- [x] Added site salt support to the make code and the check code.
 	- [x] Made it very easy to include authpanel's library into your php files via: require('authcode_class.php');
 	- [x] Make code Visualy appealing
@@ -12,11 +17,11 @@ AuthPanel is supposed to be a very lite weight code based authencation system.
 
 
 #Coders note:#
-	I have updated the authpanel to version 1.0.3 and made it a class file instead of an api.
+	I have updated the authpanel to version 1.0.4 and secured it agains novice crackers from getting user data from provided code.
 
 
 
 #Usage:#
-[Example Usage](https://gist.github.com/Immortal-/6386123)
+[Example Usage](https://gist.github.com/Immortal-/5ce777f0d7d80186c750)
 
 	
